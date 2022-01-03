@@ -14,6 +14,5 @@ constexpr auto sp = ' ';
 int main()
 {
 	async_with_stdio;
-
 	return 0;
 }
