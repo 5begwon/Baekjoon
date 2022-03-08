@@ -1,23 +1,37 @@
 #include <iostream>
 #include <string>
+
 using namespace std;
 
 int main()
 {
 	int num;
 	int multiply = 1;
+	int array[10] = { 0, };
+
 	string s;
-	int array[9] = { 0, };
 
 	for (int i = 0; i < 3; i++)
 	{
 		cin >> num;
 		multiply *= num;
 	}
-	for (int i = 1; i < 9; i++)
+	s = to_string(multiply);
+
+	for (int i = 0; i < s.length() + 1; i++)
 	{
-		s = multiply;
+		for (int j = 48; j <= 57; j++)
+		{
+			if (s[i] == j)
+			{
+				array[j - 48] += 1;
+			}
+		}
 	}
-	cout << s;
+
+	for (int i = 0; i < 10; i++)
+	{
+		cout << array[i] << endl;
+	}
 	return 0;
 }
