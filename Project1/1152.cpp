@@ -24,9 +24,9 @@ int main()
 	{
 		if (word[i] == sp)
 		{
-			if (i == 0 || i == word.length())
+			if (i == 0 || i == word.length() - 1)
 			{
-				continue;
+				count--;
 			}
 			else
 			{
