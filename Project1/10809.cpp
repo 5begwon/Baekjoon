@@ -15,26 +15,25 @@ int main()
 {
 	async_with_stdio;
 
+	list<int> resultList;
+	list<int>::iterator iter;
+
 	string s;
+
 	cin >> s;
 
-	for (int i = 0; i < s.length(); i++)
+	for (int j = 0; j < s.length(); j++)
 	{
-		for (int j = 97; j <= 122; j++)
+		if (s[j] == i)
 		{
-			if (s[i] == j)
-			{
-				cout << s.find(s[i]) << sp;
-				break;
-			}
-			else
-			{
-				cout << -1 << sp;
-			}
-			break;
+			resultList.push_back(s.find(i));
 		}
 	}
 
+	for (iter = resultList.begin(); iter != resultList.end(); iter++)
+	{
+		cout << *iter << sp;
+	}
 	return 0;
 }
 
