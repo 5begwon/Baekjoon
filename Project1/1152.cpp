@@ -24,14 +24,11 @@ int main()
 	{
 		if (word[i] == sp)
 		{
-			if (i == 0 || i == word.length() - 1)
-			{
+			count++;
+			if (i == 0)
 				count--;
-			}
-			else
-			{
-				count++;
-			}
+			if (i == word.length() - 1)
+				count--;
 		}
 	}
 
