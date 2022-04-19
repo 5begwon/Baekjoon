@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <list>
+#include <list>
 #include <algorithm>
 #include <string>
 #include <cmath>
@@ -15,34 +16,41 @@ int main()
 {
 	async_with_stdio;
 
-	vector<string> stringArray = { "", };
-	vector<string>::iterator iter;
-	string s;
-	int count;
-	cin >> count;
+	list<string> wordList;
+	list<string>::iterator iter;
+
+	string word;
+	int score = 0;
+	int resultScore = 0;
+	int count = 0;
 
 	for (int i = 0; i < count; i++)
 	{
-		cin >> s;
-		stringArray.push_back(s);
+		getline(cin, word);
+		wordList.push_back(word);
 	}
 
-	for (int i = 0; i < stringArray.size(); i++)
+	for (int i = 0; i < wordList.max_size(); i++)
 	{
-		for (int j = 0; j < stringArray[i].size(); j++)
+		for (int j = 0; j < advance(wordList.begin(), 1) j++)
 		{
-			stringArray[i].
+
 		}
 	}
 
-	//for (iter = stringArray.begin(); iter < stringArray.end(); iter++)
-	//{
-	//	cout << *iter << endl;
-	//}
-	//for (int i = 0; i < stringArray.size(); i++)
-	//{
-	//	cout << stringArray[i] << endl;
-	//}
+	for (int i = 0; i < word.length(); i++)
+	{
+		if (word[i] == 'O')
+		{
+			score += 1;
+			resultScore += score;
+		}
+		else if (word[i] == 'X')
+		{
+			score = 0;
+		}
+	}
+	cout << resultScore;
 
 	return 0;
 }
