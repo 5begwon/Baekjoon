@@ -15,43 +15,27 @@ int main()
 {
 	async_with_stdio;
 
-	list<int> resultList;
-	list<int>::iterator iter;
+	string word;
+	int array[26];
+	fill_n(array, 26, -1);
+	cin >> word;
 
-	string s;
-
-	cin >> s;
-
-	for (int j = 0; j < s.length(); j++)
+	for (char c = 97; c < 123; c++)
 	{
-		if (s[j] == i)
+		for (int i = 0; i < word.length(); i++)
 		{
-			resultList.push_back(s.find(i));
+			if (word.at(i) == c)
+			{
+				if (array[c - 97] == -1)
+					array[c - 97] = i;
+			}
 		}
 	}
 
-	for (iter = resultList.begin(); iter != resultList.end(); iter++)
+	for (int i = 0; i < 26; i++)
 	{
-		cout << *iter << sp;
+		cout << array[i] << sp;
 	}
+
 	return 0;
 }
-
-//baekjoon
-//void Check(string s)
-//{
-//	for (int i = 0; s.length(); i++)
-//	{
-//		for (int j = 97; j <= 122; j++)
-//		{
-//			if (s[i] == j)
-//			{
-//				cin 
-//			}
-//			else
-//			{
-//
-//			}
-//		}
-//	}
-//}
