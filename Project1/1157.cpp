@@ -18,6 +18,7 @@ int main()
 	string word;
 	int array[26];
 	fill_n(array, 26, 0);
+	int temp, count = 0;
 
 	cin >> word;
 
@@ -31,7 +32,17 @@ int main()
 			}
 		}
 	}
+	
+	temp = 1;
+	for (int i = 0; i < 26; i++)
+	{
+		if (array[i] > temp)
+		{
+			temp = array[i];
+		}
+	}
 
+	cout << temp;
 
 	return 0;
 }
